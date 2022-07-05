@@ -1,10 +1,13 @@
 # Wlamart Sales Forecasting
 
 **What is Sales Forecasting** - It is the process of using a company’s sales records over the past few years to predict the short-term or long-term sales performance of the company in the future. 
+
 **Why is Sales Forecasting Required** – Sales Forecasting is one of the pillars of proper financial planning. It is a globally conducted corporate practice where number of objectives are identified, action-plans are chalked out as well as budgets and resources are allotted to them to improve sales. With an accurate sales forecast in hand, companies can plan wisely and if the varying factors are not predicted correctly, then there could be staffing issues at stores, financial implications, and the business could become obsolete.
+
 **Who and how would it benefit** - Business Sales Executives often find themselves scrambling for answers when it comes to sales forecasting during business reviews with their leaderships team. The Sales Forecasting will help sales executives to find such answers upfront and be ready with numbers and predictions to share with leaderships team. 
 With help of sales forecasting, the individual stores can upscale their customer satisfaction by stocking the right products at right time and decrease overstocking and wastage of food products.
 **How to solve this problem** – The sales forecast can be predicted by building the predictive model using statistical algorithms and machine learning techniques and such techniques are used to identify the likelihood of future outcomes based on historical data. The Sales Forecast Model that learns from the past sales records, events, demographic details, and predict the accurate sales so company is ready to source appropriate resources before the actual event happens.
+
 **Explanation of Solution** – To build the sales forecast model, historical data from 45 Walmart stores located in different regions are collected for past 3 years (2010 to 2012). The gathered for this were having store ids, department ids, weekly sales, and date, the week was having any holidays, average temperature in that region, fuel price, unemployment rate and consumer price index etc. The exploratory analysis was performed to understand what are the factors that influence weekly sales and would help predict sales values. With the help of analysis, we figured out that stores type A is having highest median weekly sales than other stores, the thanksgiving week and Christmas weeks were having highest weekly sales for all three years, the median weekly sales for holiday weeks and non-holiday weeks are almost same but max weekly sales during holidays are quite higher than non-holiday weeks. Also performed correlation test to understand what the factors are those strongly correlated with sales value and departments and store size are the top ones. This analysis also helped to remove unwanted features that would not contribute sales prediction.
 To build the model, several machine learning algorithms are used. The ML regressors are used to predict the continuous values based on multiple predictor variables, here weekly sales value is predicted using predictor variables such as store, department, size, temperature, isHoliday etc. 
 These different models are then tested with test data and evaluated the model’s accuracy and the model which have best accuracy which is 97.7% and least errors are baselined as Sales Forecast Model. 
@@ -31,4 +34,13 @@ Brief about ARIMA model – it is a very popular statistical method for time ser
 •	The data series is stationary, which means that the mean and variance should not vary with time. A series can be made stationary by using log transformation or differencing the series.
 •	The data provided as input must be a univariate series, since arima uses the past values to predict the future values.
 
+**CONCLUSION** :
+Based on the exploratory analysis performed on different features, correlation among features and training result of ML algorithms, following inferences or conclusions can be drawn:
+
+Weekly Sales are affected by the week of year. Holiday weeks witnessed more sales than the non-holiday weeks. Notables are Thanksgiving and Christmas weeks, Size of the store is a major contributing factor in the weekly sales. Department, Store size and Type have moderate correlation with the weekly sales.
+Markdowns 1-5, Temperature. Fuel price, CPI and Unemployment are very weakly correlated with the weekly sales.
+Sales are also dependent on the department of the store as different departments showed different levels of weekly sales
+
+Based on the trained models for predicting the future sales, Gradient Boosting Machine with tuned hyperparameters performs the best.
+The data is trained on several more machine learning algorithms such as KNN regression, decision tree, Random Forest and XGBoost and accuracy score is calculated to baseline the model. Comparing the accuracy of different models, it turns out that XGBoost regressor with accuracy score 97.7% and Root Mean Squared Error 3463 is the best model for this project and is baselined. 
 
